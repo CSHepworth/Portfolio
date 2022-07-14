@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: white;
+                height: 100%;
+                color: black;
+
+            }
+            .h1 {
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 40px;
+                background-color: black;
+                color: white;
+                text-indent: 3%;
+            }
+            .div1 {
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                color: black;
+                margin-left: 7%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1 class="h1">
+            Calculator Prototype
+        </h1>
+
+        <div class="div1">
+            
+            <form>
+                <label for="x">Enter a value for x:</label>
+                    <input type="text" id="x" name="x" size="2" maxlength="35" value="">
+                <br><br>
+                <label for="y">Enter a value for y:</label>
+                    <input type="text" id="y" name="y" size="2" maxlength="35" value="">
+                <br><br>
+            </form>
+
+            <button type="button" onclick="multiplyFunction()">Multiply</button>
+            <button type="button" onclick="divideFunction()">Divide</button>
+            <button type="button" onclick="addFunction()">Add</button>
+            <button type="button" onclick="subtractFunction()">Subtract</button>
+        </div>
+    </body>
+</html>
