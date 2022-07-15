@@ -9,19 +9,29 @@
 
             }
             .h1 {
-                text-align: left;
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 40px;
                 background-color: black;
                 color: white;
-                text-indent: 3%;
             }
             .div1 {
-                text-align: left;
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 20px;
                 color: black;
-                margin-left: 7%;
+                border-style: solid;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+            .p1 {
+                border-style: solid;
+                width: max-content;
+                min-width: 30%;
+                height: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
             }
         </style>
     </head>
@@ -36,10 +46,10 @@
             
             <form>
                 <label for="x">Enter a value for x:</label>
-                    <input type="text" id="x" name="x" size="2" maxlength="35" value="">
+                    <input type="text" id="x" name="x" size="1" maxlength="35" value="" style="text-align: center;">
                 <br><br>
                 <label for="y">Enter a value for y:</label>
-                    <input type="text" id="y" name="y" size="2" maxlength="35" value="">
+                    <input type="text" id="y" name="y" size="1" maxlength="35" value="" style="text-align: center;">
                 <br><br>
             </form>
 
@@ -47,6 +57,19 @@
             <button type="button" onclick="divideFunction()">Divide</button>
             <button type="button" onclick="addFunction()">Add</button>
             <button type="button" onclick="subtractFunction()">Subtract</button>
+            <br><br>
+
+            <p>Result:</p>
+            <p id="Result" class="p1"></p>
+
+            <script>
+                function multiplyFunction() {
+                        let x = document.getElementById("x").value;
+                        let y = document.getElementById("y").value;
+                        let z = x * y;
+                        document.getElementById("Result").innerHTML = z;
+                }
+            </script>
         </div>
     </body>
 </html>
