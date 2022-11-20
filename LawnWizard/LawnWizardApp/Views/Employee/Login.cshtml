@@ -1,0 +1,25 @@
+﻿@{Layout = null;}
+<link rel="stylesheet" href="~/css/style.css">
+@model LoginEmployee
+
+<div>
+    <div>
+        <h1>Login</h1>
+        <form method="post" asp-controller="Employee" asp-action="LoginEmployee">
+            <div>
+                <label asp-for="LoginEmail">Email:</label>
+                <span asp-validation-for="LoginEmail"></span>
+                <input type="email" asp-for="LoginEmail">
+            </div>
+            <div>
+                <label asp-for="LoginPassword">Password:</label>
+                <span asp-validation-for="LoginPassword"></span>
+                <input type="password" asp-for="LoginPassword">
+            </div>
+            <button>
+                <span>Login</span>
+            </button>
+        </form>
+        <p>Not an Employee? Register <a href="/register">here</a>.</p>
+    </div>
+</div>
