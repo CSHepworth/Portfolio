@@ -36,7 +36,9 @@ public class Employee
     [Required(ErrorMessage = "is required")]
     public string Confirm { get; set; }
 
-    public int AdminStatus { get; set; }
+    public int AdminStatus { get; set; } = 0;
+
+    
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 

@@ -84,4 +84,19 @@ public class EmployeeController : Controller
 
         return View("Register");
     }
+
+    [HttpGet("employees")]
+    public IActionResult Employees()
+    {
+        Employee? loggedEmployee = db.Employees.FirstOrDefault(e => e.EmployeeId == HttpContext.Session.GetInt32("employeeId"));
+
+        if (loggedEmployee != null)
+        {
+            ViewBag.Employee = loggedEmployee;
+            List<Employee> allEmployees = db.Employees.ToList();
+            return View("Employees", allEmployees);
+        }
+
+        return RedirectToAction("Login", "Employee");
+    }
 }
