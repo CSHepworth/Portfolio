@@ -11,13 +11,25 @@ public class Employee
 
     [Display(Name = "First Name")]
     [Required(ErrorMessage = "is required")]
+    [StringLength(50)]
     [MinLength(2, ErrorMessage = "Must be at least 2 characters")]
     public string FirstName { get; set; }
 
     [Display(Name = "Last Name")]
     [Required(ErrorMessage = "is required")]
+    [StringLength(50)]
     [MinLength(2, ErrorMessage = "Must be at least 2 characters")]
     public string LastName { get; set; }
+
+    [Display(Name = "DoB")]
+    [Required(ErrorMessage = "is required")]
+    [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+    public DateOnly DoB { get; set; }
+
+    [Phone]
+    [Display(Name = "Phone#")]
+    [Required(ErrorMessage = "is required")]
+    public int Phone { get; set; }
 
     [EmailAddress]
     [Display(Name = "Email")]
@@ -37,8 +49,6 @@ public class Employee
     public string Confirm { get; set; }
 
     public int AdminStatus { get; set; } = 0;
-
-    
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 
