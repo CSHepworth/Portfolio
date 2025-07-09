@@ -1,0 +1,1 @@
+# This folder contains showcases of python code written by Cooper Hepworth
