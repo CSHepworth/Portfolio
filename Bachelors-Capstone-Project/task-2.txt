@@ -1,0 +1,73 @@
+Project Overview
+
+	A. Create a proposal for a data analytics project by doing the following:
+
+		1. Describe a research question or organizational need that your project will solve.
+
+		2. Describe the context and background for your project.
+
+		3. Summarize three published works that relate to the research question or organizational need in part A1.
+	 
+			Note: These published works should serve as background information to support your proposed project and may include interviews, white papers, research studies, or other types of work by industry professionals.
+	 
+			a. Describe how each published work informs the development of the project.
+
+		4. Describe the deliverables (e.g., reports, visuals, apps, or models) for the data analytics solution you will implement to address the research question or organizational need described in part A1.
+
+		5. Explain how the data analytics solution will benefit the organization and support a decision-making process.
+
+Data Analytics Project Plan
+
+	B. Describe your data analytics project plan by doing the following:
+
+		1. Describe the goals, objectives, and deliverables for the project.
+
+		2. Describe the scope of the project.
+
+		3. Explain how you will use a project planning methodology (e.g., ADDIE, SDLC, Agile, CRISP-DM, or SEMMA) to organize and implement your project.
+
+		4. Provide a timeline with milestones for your project, including the duration and start and end dates for each milestone.
+
+		5. Provide a list of resources and any associated costs needed to implement the project (e.g., hardware, software, work hours, third-party services).
+
+		6. Describe the measurable criteria you will use to evaluate the success of project execution.
+
+Design of Data Analytics Solution
+
+	C. Describe the data analytics solution you will use to address the research question or organizational need identified in part A by doing the following:
+
+		1. Identify the hypothesis of the project.
+
+		2. Identify the analytical methods (i.e., descriptive, diagnostic, predictive, or prescriptive) you will implement in your data analytics solution.
+
+			a. Justify why the analytical methods identified in part C2 are appropriate for your project.
+
+		3. Describe the tools and environments that you will use to produce the data analytics solution, including any applicable third-party code.
+
+		4. Describe the methods and metrics you will use to evaluate the output of your data analytics solution or model.
+
+			a. Justify why the chosen methods and metrics are appropriate for evaluating the output of your data analytics solution or model.
+
+		5. Describe how you will assess the practical significance of the data analytics solution, including specific criteria to determine whether it has provided the expected benefits and supported a decision-making process.
+
+		6. Describe the tools and graphical representations you will use to visually communicate the findings of your data analytics solution.
+ 
+Description of Dataset(s)
+
+	D. Write a description of the data by doing the following:
+
+		1. Identify the source(s) of the data.
+
+		2. Discuss why this dataset is appropriate for the stated goals of your project.
+
+		3. Describe the data collection methods you used.
+
+		4. Summarize your observations on the quality and completeness of the data.
+
+		5. Discuss data governance; data privacy and security; and ethical, legal, and regulatory compliance considerations that relate to the dataset and the proposed project.
+
+			a. Describe the precautions you will need to take when working with and communicating about the data for each of the considerations in part D5.
+		 
+		E. Acknowledge sources, using in-text citations and references, for content that is quoted, paraphrased, or summarized.
+		 
+		F. Demonstrate professional communication in the content and presentation of your submission.
