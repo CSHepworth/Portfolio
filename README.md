@@ -11,4 +11,5 @@ My wife and I are both Idaho natives. We love enjoying the beautiful outdoors of
 ## About this portfolio
 Projects contained within this portfolio include:
 
-...
+### WGU Capstone Project
+This was my capstone project for completing my Bachelor's degree in Data Analytics. It investigates Formula One racing data over the past 75 years and compares driver and contructor times to determine which has a greater impact on race performance. This project incorporated data manipulation and cleaning with python, data analysis through aggregation and generation of charts, and generating a mixed effects model via R. 
