@@ -8,7 +8,7 @@ I am happily married. My wife and I have three kids. The oldest, Patton, is five
 
 My wife and I are both Idaho natives. We love enjoying the beautiful outdoors of our state and taking our kids wherever we can. We enjoy going to the mountains, camping, and spending time with our extended families.
 
-!["Hepworth Family"](images/Hepworth-Family.jpg)
+!["Hepworth Family"](Images/Hepworth-Family.jpg)
 
 ## About this portfolio
 Projects contained within this portfolio include:
