@@ -6,4 +6,4 @@ A lawn care company management application developed with a Django back end and 
 
 Allows the user to create and manage customers, employees, addresses, and invoices.
 
-!["Lawn Wizard Logo"](Images/lawn-wizard-logo-with-title.png)
+!["Lawn Wizard Logo"](../Images/lawn-wizard-logo-with-title.png)
