@@ -77,8 +77,12 @@ WSGI_APPLICATION = "Lawn_Wizard_Django_Project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "lawnwizarddjangodb",
+        "USER": "lawnwizard",
+        "PASSWORD": "root",
+        "HOST": "localhost",
+        "PORT": "5432"
     }
 }
 

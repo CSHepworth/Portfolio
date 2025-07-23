@@ -1,16 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Address(models.Model):
-    id = models.AutoField(primary_key = True)
-    address_line_1 = models.CharField(max_length = 100)
-    address_line_2 = models.CharField(max_length = 100)
-    city = models.ForeignKey(models.City)
-    zip = models.IntegerField(max_length = 5)
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
-    author = models.ForeignKey(User)
-
 class City(models.Model):
     id = models.AutoField(primary_key = True)
     name = models.CharField(max_length = 100)
@@ -69,4 +59,14 @@ class City(models.Model):
     state = models.CharField(max_length = 2, choices = state_choices)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, on_delete = models.CASCADE)
+
+class Address(models.Model):
+    id = models.AutoField(primary_key = True)
+    address_line_1 = models.CharField(max_length = 100)
+    address_line_2 = models.CharField(max_length = 100)
+    city = models.ForeignKey(City, on_delete = models.CASCADE)
+    zip = models.CharField(max_length = 5)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
+    author = models.ForeignKey(User, on_delete = models.CASCADE)
