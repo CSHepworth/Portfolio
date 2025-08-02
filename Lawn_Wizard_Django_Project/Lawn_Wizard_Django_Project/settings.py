@@ -57,7 +57,7 @@ ROOT_URLCONF = "Lawn_Wizard_Django_Project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join()],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

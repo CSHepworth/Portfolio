@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from . import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("testing/", views.testing, name = "testing"),
+    path("test_field/<str:field>/", views.test_field, field = "test_field")
 ]
