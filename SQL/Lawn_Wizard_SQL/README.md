@@ -2,4 +2,4 @@
 
 ## SQL Queries used to build and maintain data in the Lawn Wizard Database.
 
-!["Lawn Wizard Logo"](.../Images/lawn-wizard-logo=with-title.png)
+!["Lawn Wizard Logo"](../../Images/lawn-wizard-logo-with-title.png)
