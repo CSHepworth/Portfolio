@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
+from django.http import HttpResponse, JsonResponse
+
+from address_manager.models import Address
 
 # Create your views here.
 def testing(request):
