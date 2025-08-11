@@ -64,13 +64,58 @@ CREATE TABLE races (
     FOREIGN KEY (circuit_id) REFERENCES circuits
 );
 
+CREATE TABLE status (
+    status_id INT AUTO_INCREMENT,
+    status VARCHAR(50) NOT NULL,
+    PRIMARY KEY (status_id)
+)
+
 CREATE TABLE results (
     result_id INT AUTO_INCREMENT,
     race_id INT,
     driver_id INT,
     constructor_id INT,
+    number INT,
+    grid INT,
+    position INT,
+    position_text VARCHAR(3),
+    position_order INT,
+    points DECIMAL(2, 1),
+    laps INT,
+    time TEXT,
+    milliseconds INT,
+    fastest_lap INT,
+    rank INT,
+    fastest_lap_time TEXT,
+    fastest_lap_speed DECIMAL(3, 3),
+    status_id INT,
     PRIMARY KEY (result_id),
     FOREIGN KEY (race_id), REFERENCES races,
-    FOREIGN KEY (driver_id)m REFERENCES drivers,
-    FOREIGN KEY (constructor_id), REFERENCES constructors
+    FOREIGN KEY (driver_id) REFERENCES drivers,
+    FOREIGN KEY (constructor_id), REFERENCES constructors,
+    FOREIGN KEY (status_id), REFERENCES status
+);
+
+CREATE TABLE lap_times (
+    race_id INT,
+    driver_id INT,
+    lap INT,
+    position INT,
+    time TEXT,
+    milliseconds INT,
+    PRIMARY KEY (race_id, driver_id, lap),
+    FOREIGN KEY (race_id) REFERENCES races,
+    FOREIGN KEY (driver_id) REFERENCES drivers
+);
+
+CREATE TABLE constructor_results (
+    constructor_result_id INT AUTO_INCREMENT,
+    race_id INT,
+    constructor_id INT,
+    points DECIMAL(2,1),
+    status_id INT,
+    PRIMARY KEY (constructor_result_id),
+    FOREIGN KEY (race_id) REFERENCES races,
+    FOREIGN KEY (constructor_id) REFERENCES constructors,
+    FOREIGN KEY (status_id) REFERENCES status
 );
