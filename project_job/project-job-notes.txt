@@ -1,0 +1,53 @@
+Job Application Project
+
+I. Problems
+
+	A. Applicants
+	
+		1. Can't get jobs
+		
+		2. Receive no feedback from employers
+		
+			a. employers never respond
+			
+			b. employers never explain why they weren't chosen
+			
+		3. Time waste
+		
+		4. Vague job requirements
+		
+		5. Guessing salary
+		
+		6. No communication with real humans
+		
+		7. fake jobs
+		
+		8. applicant tracking systems (ATS)
+		
+			a. AI processes resumes
+	
+	B. Employers
+	
+		1. too many applicants to chose from
+		
+		2. can't find the right talent
+		
+II. Application Solutions
+
+	A. Required communication
+	
+		1. employers MUST respond to every applicant they receive with a clear reason as to why the applicant was not chosen
+	
+	B. Limited applications
+	
+		1. Applicants can only apply for a fixed amount of jobs
+		
+		2. Employers can only receive a fixed amount of applicants for a given job. Applicants must be addressed and rejected if they want to receive more.
+	
+	C. Employer reputation score
+	
+		1. Applicants can rate employers according to real metrics
+		
+	D. Metrics
+	
+		1. Employers log qualifications for jobs. They reject candidates based on these qualifications.

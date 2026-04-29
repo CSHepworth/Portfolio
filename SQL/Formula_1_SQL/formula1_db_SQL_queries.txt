@@ -1,0 +1,119 @@
+CREATE TABLE circuits (
+	circuitId INT IDENTITY(1,1) PRIMARY KEY,
+	circuitRef NVARCHAR(50) NOT NULL,
+	name NVARCHAR(50) NOT NULL,
+	location NVARCHAR(50) NOT NULL,
+	country NVARCHAR(50) NOT NULL,
+	lat FLOAT NOT NULL,
+	lng FLOAT NOT NULL,
+	alt SMALLINT NOT NULL,
+	url NVARCHAR(MAX) NOT NULL,
+	createdAt DATETIME2(3) NOT NULL
+		CONSTRAINT DF_circuits_createdAt DEFAULT SYSUTCDATETIME(),
+	updatedAt DATETIME2(3) NOT NULL
+		CONSTRAINT DF_circuits_updatedAt DEFAULT SYSUTCDATETIME()
+);
+
+CREATE TRIGGER trg_circuits_updatedAt
+ON circuits
+AFTER UPDATE
+AS BEGIN
+	SET NOCOUNT ON;
+	
+	UPDATE c
+	SET updatedAt = SYSUTCDATETIME()
+	FROM circuits c
+	INNER JOIN inserted i
+		ON c.circuitId = i.circuitId;
+END;
+
+CREATE TABLE constructors (
+	constructorId INT IDENTITY(1,1) PRIMARY KEY,
+	constructorRef NVARCHAR(50) NOT NULL,
+	name NVARCHAR(50) NOT NULL,
+	nationality NVARCHAR(50) NOT NULL,
+	url NVARCHAR(MAX) NOT NULL,
+	createdAt DATETIME2(3) NOT NULL
+		CONSTRAINT DF_constructors_createdAt DEFAULT SYSUTCDATETIME(),
+	updatedAt DATETIME2(3) NOT NULL
+		CONSTRAINT DF_constructors_updatedAt DEFAULT SYSUTCDATETIME()
+);
+
+CREATE TRIGGER trg_constructors_updatedAt
+ON constructors
+AFTER UPDATE
+AS BEGIN
+	SET NOCOUNT ON;
+	
+	UPDATE c
+	SET updatedAt = SYSUTCDATETIME()
+	FROM constructors c
+	INNER JOIN inserted i
+		ON c.constructorId = i.constructorId;
+END;
+
+CREATE TABLE constructor_results (
+	constructorResultsId INT PRIMARY KEY,
+	raceId INT NOT NULL,
+	constructorId INT NOT NULL,
+	points TINYINT NOT NULL,
+	status VARCHAR(50)
+	createdAt DATETIME2(3) NOT NULL
+		CONSTRAINT DF_constructor_results_createdAt DEFAULT SYSUTCDATETIME(),
+	updatedAt DATETIME2(3) NOT NULL
+		CONSTRAINT DF_constructor_results_updatedAt DEFAULT SYSUTCDATETIME()
+);
+
+CREATE TRIGGER trg_constructor_results_updatedAt
+ON constructor_results
+AFTER UPDATE
+AS BEGIN
+	SET NOCOUNT ON;
+	
+	UPDATE c
+	SET updatedAt = SYSUTCDATETIME()
+	FROM constructor_results c
+	INNER JOIN inserted i
+		ON c.constructorResultsId = i.constructorResultsId;
+END;
+
+SELECT
+	c.name AS column_name,
+	t.name AS data_type,
+	c.max_length,
+	c.is_nullable
+FROM sys.columns c
+JOIN sys.types t
+	ON c.user_type_id = t.user_type_id
+WHERE c.object_id = OBJECT_ID('circuits');
+
+INSERT INTO circuits (circuitRef, name, location, country, lat, lng, alt, url)
+VALUES ("albert_park", "Albert Park Grand Prix Circuit", "Melbourne", "Austria", -37.8497, 144.968, 10, "http://en.wikipedia.org/wiki/Melbourne_Grand_Prix_Circuit");
+
+UPDATE circuits
+SET country = "Australia"
+WHERE circuitId = 1;
+
+Stored Procedures
+
+CREATE PROCEDURE CreateCircuitsTable
+AS
+BEGIN
+	DROP TABLE IF EXISTS circuits
+	
+	CREATE TABLE circuits (
+		circuitId INT IDENTITY(1,1) PRIMARY KEY,
+		circuitRef NVARCHAR(50) NOT NULL,
+		name NVARCHAR(50) NOT NULL,
+		location NVARCHAR(50) NOT NULL,
+		country NVARCHAR(50) NOT NULL,
+		lat FLOAT NOT NULL,
+		lng FLOAT NOT NULL,
+		alt SMALLINT NOT NULL,
+		url NVARCHAR(MAX) NOT NULL,
+		createdAt DATETIME2(3) NOT NULL
+			CONSTRAINT DF_circuits_createdAt DEFAULT SYSUTCDATETIME(),
+		updatedAt DATETIME2(3) NOT NULL
+			CONSTRAINT DF_circuits_updatedAt DEFAULT SYSUTCDATETIME()
+	);
+END;
